@@ -5,12 +5,11 @@ import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
-  'https://kzmg8c5zajhwf8rt3ku0.lite.vusercontent.net/placeholder.svg?height=400&width=600',
-  'https://kzmg8c5zajhwf8rt3ku0.lite.vusercontent.net/placeholder.svg?height=400&width=600',
-  'https://kzmg8c5zajhwf8rt3ku0.lite.vusercontent.net/placeholder.svg?height=400&width=600',
-  'https://kzmg8c5zajhwf8rt3ku0.lite.vusercontent.net/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
+  '/placeholder.svg?height=400&width=600',
 ]
-
 export default function ResponsiveCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
@@ -53,7 +52,7 @@ export default function ResponsiveCarousel() {
           {images.map((src, index) => (
             <div key={index} className="w-full flex-shrink-0">
               <Image
-                src={src}
+                src={`https://kzmg8c5zajhwf8rt3ku0.lite.vusercontent.net${src}`}
                 alt={`Slide ${index + 1}`}
                 width={600}
                 height={400}
