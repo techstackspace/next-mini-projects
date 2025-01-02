@@ -4,14 +4,15 @@ import React, { useState, useEffect } from "react";
 
 interface CarouselProps {
   images: string[]; // Array of image URLs
+  num: number;
 }
 
-const CarouselFlex: React.FC<CarouselProps> = ({ images }) => {
+const CarouselFlex: React.FC<CarouselProps> = ({ images, num }) => {
   // Function to get the visible count based on screen size
   const getVisibleCount = (): number => {
-    if (window.innerWidth <= 640) return 2; // Small screens
-    if (window.innerWidth <= 1024) return 3; // Medium screens
-    return 4; // Large screens
+    if (window.innerWidth <= 640) return num - 2; // Small screens
+    if (window.innerWidth <= 1024) return num - 1; // Medium screens
+    return num; // Large screens
   };
 
   const [startIndex, setStartIndex] = useState<number>(0);

@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <h1 className="text-3xl font-bold text-center mb-8">
         Responsive Carousel
       </h1>
-      <CarouselFlex images={images} />
+      <CarouselFlex images={images} num={4} />
     </div>
   );
 };
