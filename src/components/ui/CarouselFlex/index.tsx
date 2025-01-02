@@ -39,7 +39,7 @@ const CarouselFlex: React.FC<CarouselProps> = ({ images }) => {
     <div className="relative overflow-hidden w-full max-w-6xl mx-auto">
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 focus:outline-none"
+        className="absolute z-10 left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 focus:outline-none"
         aria-label="Previous Slide"
       >
         ←
@@ -72,7 +72,7 @@ const CarouselFlex: React.FC<CarouselProps> = ({ images }) => {
 
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 focus:outline-none"
+        className="absolute z-10 right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full hover:bg-gray-700 focus:outline-none"
         aria-label="Next Slide"
       >
         →
